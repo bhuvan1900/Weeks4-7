@@ -7,30 +7,9 @@ public class BugSpawner : MonoBehaviour
 {
     public GameObject bugfab;
 
-  
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Time.deltaTime > 5)
-        {
-
-        }
-   
-    }
-
-    public void BugNumber()
-    {
-        
-    }
-
     public void OnClick()
     {
+        //makes a bug at a random spot (within range) and then destroys it after 10 secs
             Vector3 bugpos = transform.position;
             bugpos = new Vector3(Random.Range(7, -7), (Random.Range(5, -5)));
             GameObject x =  Instantiate(bugfab, bugpos, Quaternion.identity);

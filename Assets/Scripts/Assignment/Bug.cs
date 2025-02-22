@@ -4,26 +4,15 @@ using UnityEngine;
 
 public class Bug : MonoBehaviour
 {
+
     public float bugrotspeed ;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    float speedincreaser=0;
 
- 
-
-    // Update is called once per frame
     void Update()
     {
+        //rotates the bug prefab
         Vector3 bugrot = transform.eulerAngles;
-        bugrot.z += bugrotspeed;
+        bugrot.z += bugrotspeed + speedincreaser;
         transform.eulerAngles = bugrot;
-    }
-
-    public void EatenByFrog()
-    {
-         
-       
     }
 }

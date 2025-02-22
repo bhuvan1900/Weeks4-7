@@ -17,6 +17,6 @@ public class Timer : MonoBehaviour
     void Update()
     {
         t += Time.deltaTime;
-        slider.value = t % slider.maxValue;
+        //slider.value = t % slider.maxValue;
     }
 }
